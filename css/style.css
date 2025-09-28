@@ -1,0 +1,116 @@
+/* Базові стилі */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #3a0a0a;
+  background: #fff;
+}
+
+/* Шапка */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+}
+.logo img { height: 56px; display: block; }
+.main-nav ul { 
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  gap: 115px; /* Збільшена відстань між пунктами меню */
+  align-items: center; 
+}
+.main-nav a { 
+  text-decoration: none; 
+  color: #8b4f4f; 
+  font-weight: 700; 
+  font-size: 14px; 
+  letter-spacing: 0.6px; 
+}
+
+/* Вертикальний індикатор (aside) */
+.sidebar {
+  position: fixed;
+  left: 18px;
+  top: 120px;
+}
+.sidebar ol { 
+  margin: 0; 
+  padding: 0; 
+  list-style: none; 
+  color: #b17878; 
+  font-weight: 700; 
+  line-height: 44px; 
+}
+
+/* Головний блок */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 60px 80px;
+}
+.hero-text h1 {
+  font-size: 70px;
+  line-height: 0.95;
+  margin: 0 0 100px 40px; /* Лівий відступ для зсуву тексту правіше */
+  color: #4a0f0f;
+  font-weight: 800;
+}
+
+/* Кнопка */
+.btn {
+  display: inline-block;
+  background: #ff6b6b;
+  color: white;
+  text-decoration: none;
+  padding: 15px 36px;
+  border-radius: 30px;
+  box-shadow: 0 8px 18px rgba(255,107,107,0.25);
+  font-weight: 700;
+}
+
+/* Підвал */
+.site-footer { position: fixed; bottom: 18px; left: 110px; }
+.site-footer .social { display: flex; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.site-footer img { width: 36px; height: 36px; display: block; }
+
+@media (max-width: 900px) {
+  .hero { flex-direction: column; padding: 40px; }
+  .hero-text h1 { font-size: 38px; text-align: center; margin-left:0; }
+  .hero-image img { max-width: 320px; }
+  .site-header { padding: 10px 24px; }
+  .sidebar { display: none; }
+  .site-footer { left: 20px; }
+  form button.btn { margin-left:0; } /* на мобільних кнопка під текстом */
+}
+
+.sidebar {
+  position: fixed;   /* завжди зліва */
+  left: 60px;        /* відступ від лівого краю */
+  top: 50%;          /* центр по вертикалі */
+  transform: translateY(-50%); /* зміщуємо на половину висоти, щоб по центру */
+}
+
+.sidebar ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;  
+  font-weight: 1000;
+  color: #b17878;
+  line-height: 57px;  
+}
+
+.sidebar li {
+  cursor: pointer;   
+  transition: 0.3s;
+}
+
+.sidebar li:hover {
+  color: #ff6b6b;    
+}
+
